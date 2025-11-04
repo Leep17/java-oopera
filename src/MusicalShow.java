@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class MusicalShow extends Show{
     private MusicAuthor musicAuthor;
     private String librettoText;
