@@ -18,13 +18,14 @@ public class Show {
         }
     }
 
-    public void replaceActor(Actor oldActor, Actor newActor) {
-        int index = listOfActors.indexOf(oldActor);
-        if (index != -1) {
-            listOfActors.set(index, newActor);
-        } else {
-            System.out.println("Таких актеров нет!");
+    public void replaceActor(String oldActor, Actor newActor) {
+        for(int i = 0; i<listOfActors.size(); i++){
+            if(listOfActors.get(i).getSurname().equals(oldActor)){
+                listOfActors.set(i, newActor);
+                return;
+            }
         }
+        System.out.println("Таких актеров нет!");
     }
 
     public void addNewActor(Actor actor){

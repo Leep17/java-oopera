@@ -2,7 +2,7 @@ import java.util.Objects;
 public class Person {
     private String name;
     private String surname;
-    Gender gender;
+    private Gender gender;
     private int height;
 
     public Person(int height, Gender gender, String surname, String name) {
@@ -26,6 +26,11 @@ public class Person {
 
     public int getHeight() {
         return height;
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " " + getSurname() + " (" + getHeight() + ")";
     }
 
     @Override
